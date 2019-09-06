@@ -4,10 +4,10 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 8 11
-Title "RhythmPocket"
-Date "2019-08-12"
-Rev "R0.2"
+Sheet 8 8
+Title "RhythmPocketLite"
+Date "2019-09-06"
+Rev "R0.1"
 Comp "ZephRay"
 Comment1 "zephray@outlook.com"
 Comment2 "www.zephray.me"
