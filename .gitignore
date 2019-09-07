@@ -5,6 +5,7 @@
 fp-*
 _autosave*
 *.kicad_pcb-bak
+*.sch-bak
 
 # Xilinx ISE files
 obj_dir/
