@@ -43,7 +43,7 @@ MCU
 Text Notes 1700 3350 0    100  ~ 0
 STN LCD
 Text Notes 1700 2550 0    100  ~ 0
-SPI Flash & TF-Card
+TF-Card
 Text Notes 1700 1400 0    118  Italic 24
 Table of Contents
 Text Notes 1700 1750 0    100  ~ 0
