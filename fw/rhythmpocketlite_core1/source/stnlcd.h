@@ -9,6 +9,6 @@
 #define STNLCD_H_
 
 void STN_Init();
-void STN_Frame();
+void STN_Line();
 
 #endif /* STNLCD_H_ */

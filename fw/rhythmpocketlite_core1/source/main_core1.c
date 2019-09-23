@@ -48,7 +48,7 @@ void MAILBOX_IRQHandler()
 
 void ctimer_match0_callback(uint32_t flags)
 {
-    STN_Frame();
+    STN_Line();
 }
 
 /*!
@@ -83,18 +83,17 @@ int main(void)
     /* Configuration 0 */
     matchConfig0.enableCounterReset = true;
     matchConfig0.enableCounterStop  = false;
-    matchConfig0.matchValue         = CLOCK_GetFreq(kCLOCK_CTmier2) / 80; // Screen refreshes at 60Hz
+    matchConfig0.matchValue         = CLOCK_GetFreq(kCLOCK_CTmier2) / 13600; // Hsync = 13.6kHz
     matchConfig0.outControl         = kCTIMER_Output_NoAction;
     matchConfig0.outPinInitState    = false;
     matchConfig0.enableInterrupt    = true;
 
-    //CTIMER_RegisterCallBack(CTIMER2, &ctimer_callback_table[0], kCTIMER_MultipleCallback);
-    //CTIMER_SetupMatch(CTIMER2, kCTIMER_Match_1, &matchConfig0);
-    //CTIMER_StartTimer(CTIMER2);
+    CTIMER_RegisterCallBack(CTIMER2, &ctimer_callback_table[0], kCTIMER_MultipleCallback);
+    CTIMER_SetupMatch(CTIMER2, kCTIMER_Match_1, &matchConfig0);
+    CTIMER_StartTimer(CTIMER2);
 
     while (1)
     {
-        //__WFI();
-        STN_Frame();
+        __WFI();
     }
 }

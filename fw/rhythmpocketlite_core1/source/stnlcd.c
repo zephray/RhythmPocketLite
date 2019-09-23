@@ -9,6 +9,7 @@
 
 extern const unsigned char gImage_160144test2bpp[23040];
 unsigned char framebuffer[160*160];
+static unsigned y;
 
 #define STN_CPG_H() GPIO->SET[BOARD_INITPINS_CORE1_STN_CPG_PORT] = 1u << BOARD_INITPINS_CORE1_STN_CPG_PIN
 #define STN_CPG_L() GPIO->CLR[BOARD_INITPINS_CORE1_STN_CPG_PORT] = 1u << BOARD_INITPINS_CORE1_STN_CPG_PIN
@@ -33,58 +34,57 @@ void STN_Wait(unsigned long t)
 	}
 }
 
-void STN_Frame() {
-	unsigned x, y;
-	// Scan 150 lines in total, 144 lines valid
-	STN_FR_T(); // Toggle AC line
+void STN_Line() {
+    unsigned x;
 
-	for (y = 0; y < 160; y++) {
-		// Line start sequence
-		STN_CPG_H();
-		STN_CPL_H();
-		STN_Wait(2);
-		STN_CPL_L();
+    if (y == 0) STN_FR_T();
 
-		STN_Wait(1);
-		STN_S_W((y == 0) ? 1 : 0); // Frame Sync
-		STN_Wait(1);
-		STN_CPG_L();
-		STN_Wait(2);
-		STN_CPG_H();
-		STN_Wait(2);
-		STN_CPG_L();
+    // Line start sequence
+    STN_CPG_H();
+    STN_CPL_H();
+    STN_Wait(2);
+    STN_CPL_L();
 
-		// Before Line start
-		STN_Wait(16);
-		STN_ST_H();
-		STN_Wait(2);
-		STN_CP_H();
-		STN_Wait(1);
-		STN_CP_L();
-		STN_Wait(2);
-		STN_ST_L();
-		STN_Wait(1);
+    STN_Wait(1);
+    STN_S_W((y == 0) ? 1 : 0); // Frame Sync
+    STN_Wait(1);
+    STN_CPG_L();
+    STN_Wait(2);
+    STN_CPG_H();
+    STN_Wait(2);
+    STN_CPG_L();
 
-		int ptr = y * 160;
+    // Before Line start
+    STN_Wait(16);
+    STN_ST_H();
+    STN_Wait(2);
+    STN_CP_H();
+    STN_Wait(1);
+    STN_CP_L();
+    STN_Wait(2);
+    STN_ST_L();
+    STN_Wait(1);
 
-		// Shift out pixels
-		for (x = 0; x < 160; x++) {
-			STN_CP_H();
-			STN_CPG_W(((x >= 84) && (x < 88)) ? 1 : 0);
-			STN_D0_W((framebuffer[ptr] >> 6) & 1);
-			STN_D1_W((framebuffer[ptr] >> 7) & 1);
-			ptr ++;
-			STN_CP_L();
-		}
+    int ptr = y * 160;
 
-		// Nothing to do now
-		STN_Wait(0);
-		STN_CPG_H();
-        STN_Wait(2);
-        STN_CPG_L();
-        STN_Wait(45);
+    // Shift out pixels
+    for (x = 0; x < 160; x++) {
+        STN_CP_H();
+        STN_CPG_W(((x >= 84) && (x < 88)) ? 1 : 0);
+        STN_D0_W((framebuffer[ptr] >> 6) & 1);
+        STN_D1_W((framebuffer[ptr] >> 7) & 1);
+        ptr ++;
+        STN_CP_L();
+    }
 
-	}
+    // Nothing to do now
+    STN_Wait(0);
+    STN_CPG_H();
+    STN_Wait(2);
+    STN_CPG_L();
+
+    // Increment line counter
+    y = (y < 159) ? (y+1) : 0;
 }
 
 void STN_Init() {
@@ -93,4 +93,5 @@ void STN_Init() {
     /*for (int i = 0; i < 23040; i++) {
         framebuffer[i] = (i & 1) ? 0xff : 0x00;
     }*/
+	y = 0;
 }
