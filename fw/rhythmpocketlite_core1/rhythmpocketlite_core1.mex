@@ -3,6 +3,7 @@
    <common>
       <processor>LPC55S69</processor>
       <package>LPC55S69JBD100</package>
+      <board></board>
       <mcu_data>ksdk2_0</mcu_data>
       <cores selected="cm33_core1">
          <core name="Cortex-M33 (Core #0)" id="cm33_core0" description=""/>

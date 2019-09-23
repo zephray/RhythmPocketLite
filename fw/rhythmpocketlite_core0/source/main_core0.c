@@ -162,9 +162,13 @@ int main(void)
     while (!g_secondary_core_started)
         ;
 
-    PRINTF("Write to the secondary core mailbox register: %d\r\n", g_msg);
+    //PRINTF("Write to the secondary core mailbox register: %d\r\n", g_msg);
     /* Write g_msg to the secondary core mailbox register - it causes interrupt on the secondary core */
-    MAILBOX_SetValue(MAILBOX, SECONDARY_CORE_MAILBOX_CPU_ID, g_msg);
+    //MAILBOX_SetValue(MAILBOX, SECONDARY_CORE_MAILBOX_CPU_ID, g_msg);
+
+    // Enable LCD power
+    GPIO_PortSet(GPIO, BOARD_INITPINS_CORE0_LCD_PWR_EN_PORT,
+    		1u << BOARD_INITPINS_CORE0_LCD_PWR_EN_PIN);
 
     // Configure the codec
     PRINTF("Configure CS43131 codec\r\n");
