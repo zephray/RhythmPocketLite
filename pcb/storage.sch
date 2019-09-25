@@ -201,7 +201,7 @@ F 3 "~" H 7600 1850 50  0001 C CNN
 	1    7600 1850
 	1    0    0    -1  
 $EndComp
-Text GLabel 3900 3300 0    50   Input ~ 0
+Text GLabel 4700 3300 0    50   Input ~ 0
 ~SD0_PWR_EN
 Wire Wire Line
 	8100 2300 8100 2700
@@ -258,17 +258,17 @@ Wire Wire Line
 	5900 2700 6400 2700
 Wire Wire Line
 	6400 2700 6400 2800
-Text GLabel 3900 3500 0    50   Input ~ 0
+Text GLabel 4700 3500 0    50   Input ~ 0
 SD0_CLK
-Text GLabel 3900 3400 0    50   Input ~ 0
+Text GLabel 4700 3400 0    50   Input ~ 0
 SD0_CMD
-Text GLabel 3900 3800 0    50   Input ~ 0
+Text GLabel 4700 3800 0    50   Input ~ 0
 SD0_D0
-Text GLabel 3900 3900 0    50   Input ~ 0
+Text GLabel 4700 3900 0    50   Input ~ 0
 SD0_D1
-Text GLabel 3900 3600 0    50   Input ~ 0
+Text GLabel 4700 3600 0    50   Input ~ 0
 SD0_D2
-Text GLabel 3900 3700 0    50   Input ~ 0
+Text GLabel 4700 3700 0    50   Input ~ 0
 SD0_D3
 Text GLabel 6200 4100 0    50   Output ~ 0
 ~SD0_CD
@@ -284,150 +284,8 @@ F 3 "" H 6400 2700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Connection ~ 6400 2700
-$Comp
-L symbols:TXS0108EPW U?
-U 1 1 5D7F7878
-P 4500 3300
-AR Path="/5D438133/5D7F7878" Ref="U?"  Part="1" 
-AR Path="/5DB2122B/5D7F7878" Ref="U300"  Part="1" 
-F 0 "U300" H 4500 3765 50  0000 C CNN
-F 1 "TXS0108EPW" H 4500 3674 50  0000 C CNN
-F 2 "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm" H 4500 3300 50  0001 C CNN
-F 3 "" H 4500 3300 50  0001 C CNN
-	1    4500 3300
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+3V3 #PWR?
-U 1 1 5D7F7886
-P 5000 3000
-AR Path="/5D438133/5D7F7886" Ref="#PWR?"  Part="1" 
-AR Path="/5DB2122B/5D7F7886" Ref="#PWR0109"  Part="1" 
-F 0 "#PWR0109" H 5000 2850 50  0001 C CNN
-F 1 "+3V3" H 5015 3173 50  0000 C CNN
-F 2 "" H 5000 3000 50  0001 C CNN
-F 3 "" H 5000 3000 50  0001 C CNN
-	1    5000 3000
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	5000 3000 5000 3100
-Wire Wire Line
-	5000 3100 4900 3100
-$Comp
-L power:GND #PWR?
-U 1 1 5D7F788E
-P 5000 4300
-AR Path="/5D438133/5D7F788E" Ref="#PWR?"  Part="1" 
-AR Path="/5DB2122B/5D7F788E" Ref="#PWR0110"  Part="1" 
-F 0 "#PWR0110" H 5000 4050 50  0001 C CNN
-F 1 "GND" H 5005 4127 50  0000 C CNN
-F 2 "" H 5000 4300 50  0001 C CNN
-F 3 "" H 5000 4300 50  0001 C CNN
-	1    5000 4300
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	4900 4200 5000 4200
-Wire Wire Line
-	5000 4200 5000 4300
-$Comp
-L Device:C C?
-U 1 1 5D7F7896
-P 5250 3100
-AR Path="/5D438133/5D7F7896" Ref="C?"  Part="1" 
-AR Path="/5DB2122B/5D7F7896" Ref="C304"  Part="1" 
-F 0 "C304" V 5500 3000 50  0000 L CNN
-F 1 "100nF" V 5400 3000 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 5288 2950 50  0001 C CNN
-F 3 "~" H 5250 3100 50  0001 C CNN
-	1    5250 3100
-	0    1    -1   0   
-$EndComp
-Wire Wire Line
-	5100 3100 5000 3100
-Connection ~ 5000 3100
-$Comp
-L power:GND #PWR?
-U 1 1 5D7F789E
-P 5400 3200
-AR Path="/5D438133/5D7F789E" Ref="#PWR?"  Part="1" 
-AR Path="/5DB2122B/5D7F789E" Ref="#PWR0111"  Part="1" 
-F 0 "#PWR0111" H 5400 2950 50  0001 C CNN
-F 1 "GND" H 5405 3027 50  0000 C CNN
-F 2 "" H 5400 3200 50  0001 C CNN
-F 3 "" H 5400 3200 50  0001 C CNN
-	1    5400 3200
-	0    -1   1    0   
-$EndComp
-$Comp
-L power:+1V8 #PWR?
-U 1 1 5D80C6E8
-P 4000 3000
-AR Path="/5D438133/5D80C6E8" Ref="#PWR?"  Part="1" 
-AR Path="/5DB2122B/5D80C6E8" Ref="#PWR0114"  Part="1" 
-F 0 "#PWR0114" H 4000 2850 50  0001 C CNN
-F 1 "+1V8" H 4015 3173 50  0000 C CNN
-F 2 "" H 4000 3000 50  0001 C CNN
-F 3 "" H 4000 3000 50  0001 C CNN
-	1    4000 3000
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	4100 3100 4000 3100
-Wire Wire Line
-	4000 3100 4000 3000
-Wire Wire Line
-	4000 4200 4000 3100
-Connection ~ 4000 3100
-$Comp
-L Device:C C?
-U 1 1 5D80C6F2
-P 3750 3100
-AR Path="/5D438133/5D80C6F2" Ref="C?"  Part="1" 
-AR Path="/5DB2122B/5D80C6F2" Ref="C303"  Part="1" 
-F 0 "C303" V 4000 3000 50  0000 L CNN
-F 1 "100nF" V 3900 2950 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 3788 2950 50  0001 C CNN
-F 3 "~" H 3750 3100 50  0001 C CNN
-	1    3750 3100
-	0    1    -1   0   
-$EndComp
-Wire Wire Line
-	3900 3100 4000 3100
-$Comp
-L power:GND #PWR?
-U 1 1 5D80C6F9
-P 3600 3100
-AR Path="/5D438133/5D80C6F9" Ref="#PWR?"  Part="1" 
-AR Path="/5DB2122B/5D80C6F9" Ref="#PWR0115"  Part="1" 
-F 0 "#PWR0115" H 3600 2850 50  0001 C CNN
-F 1 "GND" H 3605 2927 50  0000 C CNN
-F 2 "" H 3600 3100 50  0001 C CNN
-F 3 "" H 3600 3100 50  0001 C CNN
-	1    3600 3100
-	0    1    -1   0   
-$EndComp
-Wire Wire Line
-	4000 4200 4100 4200
-Wire Wire Line
-	4900 3300 5700 3300
 Wire Wire Line
 	5700 2100 7200 2100
-Wire Wire Line
-	3900 3300 4100 3300
-Wire Wire Line
-	3900 3400 4100 3400
-Wire Wire Line
-	3900 3500 4100 3500
-Wire Wire Line
-	3900 3600 4100 3600
-Wire Wire Line
-	3900 3700 4100 3700
-Wire Wire Line
-	3900 3800 4100 3800
-Wire Wire Line
-	3900 3900 4100 3900
 Wire Wire Line
 	6200 4100 6400 4100
 Text Label 5000 3300 0    50   ~ 0
@@ -444,30 +302,18 @@ Text Label 5000 3600 0    50   ~ 0
 SD_D2
 Text Label 5000 3700 0    50   ~ 0
 SD_D3
-Wire Wire Line
-	4900 3400 5900 3400
 Connection ~ 5900 3400
 Wire Wire Line
 	6300 3300 7400 3300
 Wire Wire Line
 	5700 3300 5700 2100
 Wire Wire Line
-	4900 3800 7400 3800
-Wire Wire Line
-	4900 3500 6500 3500
-Wire Wire Line
 	6900 3500 6900 3700
 Connection ~ 6900 3700
 Wire Wire Line
 	6800 3500 6900 3500
 Wire Wire Line
-	4900 3900 7400 3900
-Wire Wire Line
-	4900 3700 6300 3700
-Wire Wire Line
 	6300 3700 6300 3300
-Wire Wire Line
-	4900 3600 6500 3600
 Wire Wire Line
 	6500 3600 6500 4000
 Wire Wire Line
@@ -475,4 +321,18 @@ Wire Wire Line
 Wire Wire Line
 	6400 3100 6400 4100
 Connection ~ 6400 4100
+Wire Wire Line
+	4700 3300 5700 3300
+Wire Wire Line
+	4700 3400 5900 3400
+Wire Wire Line
+	4700 3500 6500 3500
+Wire Wire Line
+	4700 3600 6500 3600
+Wire Wire Line
+	4700 3700 6300 3700
+Wire Wire Line
+	4700 3800 7400 3800
+Wire Wire Line
+	4700 3900 7400 3900
 $EndSCHEMATC

@@ -216,22 +216,8 @@ Text GLabel 6700 1800 2    50   Output ~ 0
 SD0_D3
 Text GLabel 4200 3500 2    50   Input ~ 0
 ~SD0_CD
-Connection ~ 4500 1400
 Wire Wire Line
 	4900 1400 4500 1400
-$Comp
-L power:+3V3 #PWR?
-U 1 1 5DA800C1
-P 4500 1400
-AR Path="/5DB2122B/5DA800C1" Ref="#PWR?"  Part="1" 
-AR Path="/5D180A01/5DA800C1" Ref="#PWR0123"  Part="1" 
-F 0 "#PWR0123" H 4500 1250 50  0001 C CNN
-F 1 "+3V3" H 4515 1573 50  0000 C CNN
-F 2 "" H 4500 1400 50  0001 C CNN
-F 3 "" H 4500 1400 50  0001 C CNN
-	1    4500 1400
-	1    0    0    -1  
-$EndComp
 $Comp
 L Device:R R111
 U 1 1 5DA7199D
@@ -433,4 +419,18 @@ Text Label 4900 5950 0    50   ~ 0
 LED
 Wire Wire Line
 	4900 5950 5100 5950
+$Comp
+L power:+1V8 #PWR?
+U 1 1 5D8B4E32
+P 4500 1300
+F 0 "#PWR?" H 4500 1150 50  0001 C CNN
+F 1 "+1V8" H 4515 1473 50  0000 C CNN
+F 2 "" H 4500 1300 50  0001 C CNN
+F 3 "" H 4500 1300 50  0001 C CNN
+	1    4500 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 1300 4500 1400
+Connection ~ 4500 1400
 $EndSCHEMATC
