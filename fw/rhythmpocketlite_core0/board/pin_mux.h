@@ -47,20 +47,14 @@ void BOARD_InitBootPins(void);
  * @brief Select Digital mode.: Digital mode, digital input is enabled. */
 #define PIO0_13_DIGIMODE_DIGITAL 0x01u
 /*!
- * @brief Selects pin function.: Alternative connection 0. */
-#define PIO0_13_FUNC_ALT0 0x00u
-/*!
- * @brief Controls open-drain mode.: Open-drain. Simulated open-drain output (high drive disabled). */
-#define PIO0_13_OD_OPEN_DRAIN 0x01u
+ * @brief Selects pin function.: Alternative connection 1. */
+#define PIO0_13_FUNC_ALT1 0x01u
 /*!
  * @brief Select Digital mode.: Digital mode, digital input is enabled. */
 #define PIO0_14_DIGIMODE_DIGITAL 0x01u
 /*!
- * @brief Selects pin function.: Alternative connection 0. */
-#define PIO0_14_FUNC_ALT0 0x00u
-/*!
- * @brief Controls open-drain mode.: Open-drain. Simulated open-drain output (high drive disabled). */
-#define PIO0_14_OD_OPEN_DRAIN 0x01u
+ * @brief Selects pin function.: Alternative connection 1. */
+#define PIO0_14_FUNC_ALT1 0x01u
 /*!
  * @brief Select Digital mode.: Digital mode, digital input is enabled. */
 #define PIO0_16_DIGIMODE_DIGITAL 0x01u
@@ -328,20 +322,6 @@ void BOARD_InitBootPins(void);
 #define BOARD_INITPINS_CORE0_SW_ST_PORT 1U   /*!<@brief PORT device name: 1U */
 #define BOARD_INITPINS_CORE0_SW_ST_PIN 30U   /*!<@brief 1U pin index: 30 */
                                              /* @} */
-
-/*! @name PIO0_13 (number 71), I2C_SCL
-  @{ */
-#define BOARD_INITPINS_CORE0_I2C_SCL_GPIO GPIO /*!<@brief GPIO device name: GPIO */
-#define BOARD_INITPINS_CORE0_I2C_SCL_PORT 0U   /*!<@brief PORT device name: 0U */
-#define BOARD_INITPINS_CORE0_I2C_SCL_PIN 13U   /*!<@brief 0U pin index: 13 */
-                                               /* @} */
-
-/*! @name PIO0_14 (number 72), I2C_SDA
-  @{ */
-#define BOARD_INITPINS_CORE0_I2C_SDA_GPIO GPIO /*!<@brief GPIO device name: GPIO */
-#define BOARD_INITPINS_CORE0_I2C_SDA_PORT 0U   /*!<@brief PORT device name: 0U */
-#define BOARD_INITPINS_CORE0_I2C_SDA_PIN 14U   /*!<@brief 0U pin index: 14 */
-                                               /* @} */
 
 /*! @name PIO0_16 (number 14), LCD_PWR_EN
   @{ */
