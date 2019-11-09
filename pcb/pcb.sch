@@ -86,4 +86,6 @@ Text Notes 1300 4150 0    100  ~ 0
 7
 Text Notes 1300 1750 0    100  ~ 0
 0
+Entry Wire Line
+	0    0    100  100 
 $EndSCHEMATC

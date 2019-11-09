@@ -321,36 +321,36 @@ HOLD
 Wire Wire Line
 	6500 2900 6700 2900
 Wire Wire Line
-	6700 2200 6500 2200
-Wire Wire Line
-	6700 3100 6500 3100
-Wire Wire Line
-	6700 4200 6500 4200
-Wire Wire Line
-	6700 3800 6500 3800
-Wire Wire Line
-	6700 2400 6500 2400
-Wire Wire Line
-	4200 1900 4000 1900
+	6700 2700 6500 2700
 Wire Wire Line
 	6700 2500 6500 2500
 Wire Wire Line
-	6700 2700 6500 2700
-Text GLabel 6700 2200 2    50   Output ~ 0
-STN_S
-Text GLabel 6700 3100 2    50   Output ~ 0
-STN_FR
-Text GLabel 6700 4200 2    50   Output ~ 0
-STN_CP
-Text GLabel 6700 3800 2    50   Output ~ 0
-STN_D1
-Text GLabel 6700 2400 2    50   Output ~ 0
-STN_D0
-Text GLabel 4200 1900 2    50   Output ~ 0
-STN_ST
-Text GLabel 6700 2500 2    50   Output ~ 0
-STN_CPL
+	4200 1900 4000 1900
+Wire Wire Line
+	6700 2400 6500 2400
+Wire Wire Line
+	6700 3800 6500 3800
+Wire Wire Line
+	6700 4200 6500 4200
+Wire Wire Line
+	6700 3100 6500 3100
+Wire Wire Line
+	6700 2200 6500 2200
 Text GLabel 6700 2700 2    50   Output ~ 0
+STN_S
+Text GLabel 6700 2500 2    50   Output ~ 0
+STN_FR
+Text GLabel 4200 1900 2    50   Output ~ 0
+STN_CP
+Text GLabel 6700 2400 2    50   Output ~ 0
+STN_D1
+Text GLabel 6700 3800 2    50   Output ~ 0
+STN_D0
+Text GLabel 6700 4200 2    50   Output ~ 0
+STN_ST
+Text GLabel 6700 3100 2    50   Output ~ 0
+STN_CPL
+Text GLabel 6700 2200 2    50   Output ~ 0
 STN_CPG
 Text GLabel 4200 4600 2    50   Input ~ 0
 SW_SE
@@ -431,4 +431,8 @@ F 3 "" H 4500 1400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Connection ~ 4500 1400
+Text GLabel 6700 4600 2    50   Output ~ 0
+CODEC_RST
+Wire Wire Line
+	6500 4600 6700 4600
 $EndSCHEMATC
